@@ -1,0 +1,174 @@
+* { padding: 0px; margin: 0px; }
+body { background: #000; color: #ccc; font-family: Segoe UI, Arial, Verdana; }       
+canvas { position: absolute; top: 0; left: 0; image-rendering: optimizeSpeed; -webkit-interpolation-mode: nearest-neighbor; }
+
+.view { position: absolute; top: 0; left: 0; } 
+
+
+.viewer-ui .info {
+	position: fixed;
+	top: 5px;
+	left: 5px;
+	height: 80%;
+}
+
+.viewer-ui .info .tank-name {
+	font-size: 25px;
+	font-weight: bold;
+	color: #eee;
+}
+
+.viewer-ui .armor {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	color: #999;
+	text-align: right;
+}
+
+.viewer-ui .armor .label {
+	color: #aaa;
+	font-size: 14px;
+	margin-top: 15px;
+}
+
+.viewer-ui .armor .armor-detail {
+	margin-top: -10px;
+}
+
+.viewer-ui .armor .armor-detail .spaced {
+	color: #FC8CFF;
+}
+
+.viewer-ui .armor .unit {
+	color: #666;
+}
+
+.viewer-ui .armor .armor-value, .viewer-ui .armor .armor-computed {
+	color: #ccc;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.viewer-ui .armor .armor-angle {
+	color: #ccc;
+}
+
+.viewer-ui > .armor-scale {
+	position: fixed;
+	left: 5px;
+	bottom: 5px;
+}
+
+.viewer-ui .armor-scale .point {
+	display: inline-block;
+	width: 30px;
+	height: 15px;
+}
+
+.viewer-ui .armor-scale .point .text {
+	margin-top: -40px;
+	text-align: left;
+	transform: rotate(-1rad);
+}
+
+.viewer-ui .armor-scale .point.selected {
+	border-top: 2px solid #fff;
+}
+
+.viewer-ui .armor-scale .point.selected .text {
+	color: #fff;
+	font-weight: bold;
+}
+
+.viewer-ui .menu {
+	height: 100%;
+}
+
+.viewer-ui .menu .items {
+	float: left;
+	max-height: 100%;
+	overflow: auto;
+}
+
+.viewer-ui .menu .items .item {
+	padding: 10px;
+	background: #333;
+	margin: 0px 0px 2px 2px;
+	cursor: pointer;
+}
+
+.viewer-ui .menu .items .item .image {
+	padding-right: 10px;
+}
+
+.viewer-ui .menu.tanks .image {
+	padding-right: 10px;
+	min-width: 80px;
+}
+
+.viewer-ui .menu.tanks .item {
+	min-width: 200px;
+}
+
+.viewer-ui .menu .items .item.selected {
+	background: #555;
+}
+
+.viewer-ui .menu .submenu {
+	float: left;
+	height: 100%;
+}
+
+.viewer-ui .display-control {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	text-align: right;
+}
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	width: 400px;
+	background: rgba(0,0,0,0.5);
+	padding: 10px;
+	display: none;
+}
+
+.loading .text {
+	float: left;
+}
+
+.loading .text-progress {
+	float: right;
+}
+
+.loading .progress {
+	clear: both;
+	width: 100%;
+	height: 20px;
+	background: #999;
+}
+
+.loading .progress .bar {
+	height: 100%;
+	background: #00C400;
+}
+
+.checkbox {
+	cursor: pointer;
+	padding-right: 34px;
+	line-height: 32px;
+	background-image: url('images/checked.png');
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+
+.checkbox.checked {
+	color: #fff;
+	background-position: right bottom;
+}
